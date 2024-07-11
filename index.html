@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vho Madevha Family Tree</title>
-    <a href ="">Go Back</a>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -71,7 +70,7 @@
             width: 0;
             height: 20px;
         }
-        .tree li a {
+        .tree li > a {
             border: 2px solid #ccc;
             padding: 10px 20px;
             text-decoration: none;
@@ -81,12 +80,12 @@
             transition: all 0.5s;
             cursor: pointer; /* added cursor pointer */
         }
-        .tree li a:hover {
+        .tree li > a:hover {
             background: #c8e4f8;
             color: #000;
             border: 2px solid #94a0b4;
         }
-        .hidden {
+        .tree ul.hidden {
             display: none;
         }
         @media (max-width: 768px) {
@@ -96,7 +95,7 @@
             .tree li {
                 padding: 10px 2px 0 2px;
             }
-            .tree li a {
+            .tree li > a {
                 padding: 5px 10px;
             }
         }
@@ -112,7 +111,7 @@
             .tree li::before, .tree li::after {
                 border: 0;
             }
-            .tree li a {
+            .tree li > a {
                 padding: 5px 8px;
             }
         }
@@ -124,27 +123,27 @@
     <div class="tree">
         <ul>
             <li>
-                <a href="#" onclick="toggleChildren(this)">Vho Madevha Neluheni</a>
+                <a onclick="toggleChildren(this)">Vho Madevha Neluheni</a>
                 <ul class="hidden">
-                    <li><a href="#" onclick="toggleChildren(this)">Vho Simon Ramudzuli Neluheni na Vho Muteki Phalu</a>
+                    <li><a onclick="toggleChildren(this)">Vho Simon Ramudzuli Neluheni na Vho Muteki Phalu</a>
                         <ul class="hidden">
-                            <li><a href="#">Mashudu Mavhengani Neluheni</a></li>
-                            <li><a href="#" onclick="toggleChildren(this)">Tshililo Neluheni and Rosina Mothopi</a>
+                            <li><a>Mashudu Mavhengani Neluheni</a></li>
+                            <li><a onclick="toggleChildren(this)">Tshililo Neluheni and Rosina Mothopi</a>
                                 <ul class="hidden">
-                                    <li><a href="#">Mashudu Neluheni</a></li>
-                                    <li><a href="#">Lufuno Madevha Neluheni</a></li>
-                                    <li><a href="#">Mutshidzi Ramudzuli Neluheni (ME)</a></li>
-                                    <li><a href="#">Fhulufhelo Neluheni</a></li>
+                                    <li><a>Mashudu Neluheni</a></li>
+                                    <li><a>Lufuno Madevha Neluheni</a></li>
+                                    <li><a>Mutshidzi Ramudzuli Neluheni (ME)</a></li>
+                                    <li><a>Fhulufhelo Neluheni</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Mbavhelelo Neluheni</a></li>
-                            <li><a href="#">Tshifhiwa Neluheni</a></li>
+                            <li><a>Mbavhelelo Neluheni</a></li>
+                            <li><a>Tshifhiwa Neluheni</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Vho Joseph Madevha Neluheni</a></li>
-                    <li><a href="#">Vho Bele Neluheni</a></li>
-                    <li><a href="#">Vho Tshinakaho Matumba Neluheni</a></li>
-                    <li><a href="#">Vho Nyamuka Madi Ramulongo Neluheni</a></li>
+                    <li><a>Vho Joseph Madevha Neluheni</a></li>
+                    <li><a>Vho Bele Neluheni</a></li>
+                    <li><a>Vho Tshinakaho Matumba Neluheni</a></li>
+                    <li><a>Vho Nyamuka Madi Ramulongo Neluheni</a></li>
                 </ul>
             </li>
         </ul>
@@ -160,8 +159,8 @@
 
     <script>
         function toggleChildren(element) {
-            var childUl = element.nextElementSibling;
-            childUl.classList.toggle('hidden');
+            var ul = element.nextElementSibling;
+            ul.classList.toggle('hidden');
         }
     </script>
 </body>
