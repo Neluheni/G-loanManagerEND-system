@@ -30,7 +30,6 @@
             padding: 20px 5px 0 5px;
             transition: all 0.5s;
             display: inline-block;
-            cursor: pointer;
         }
         .tree li::before, .tree li::after {
             content: '';
@@ -79,6 +78,7 @@
             display: inline-block;
             border-radius: 5px;
             transition: all 0.5s;
+            cursor: pointer; /* added cursor pointer */
         }
         .tree li a:hover {
             background: #c8e4f8;
@@ -159,13 +159,8 @@
 
     <script>
         function toggleChildren(element) {
-            var parentLi = element.parentElement;
-            var childUl = parentLi.querySelector('ul');
-            if (childUl.classList.contains('hidden')) {
-                childUl.classList.remove('hidden');
-            } else {
-                childUl.classList.add('hidden');
-            }
+            var childUl = element.nextElementSibling;
+            childUl.classList.toggle('hidden');
         }
     </script>
 </body>
