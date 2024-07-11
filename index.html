@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #f0f0f0;
         }
         h1 {
             color: #333;
@@ -30,6 +31,10 @@
             padding: 20px 5px 0 5px;
             transition: all 0.5s;
             display: inline-block;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: 10px;
         }
         .tree li::before, .tree li::after {
             content: '';
@@ -39,6 +44,7 @@
             border-top: 2px solid #ccc;
             width: 50%;
             height: 20px;
+            transition: all 0.5s;
         }
         .tree li::after {
             right: auto;
@@ -71,14 +77,15 @@
             height: 20px;
         }
         .tree li > a {
+            display: inline-block;
             border: 2px solid #ccc;
             padding: 10px 20px;
             text-decoration: none;
             color: #666;
-            display: inline-block;
             border-radius: 5px;
             transition: all 0.5s;
-            cursor: pointer; /* added cursor pointer */
+            cursor: pointer;
+            background-color: #f9f9f9;
         }
         .tree li > a:hover {
             background: #c8e4f8;
@@ -107,6 +114,7 @@
             .tree li {
                 float: none;
                 padding: 10px 0 0 0;
+                margin: 10px 0;
             }
             .tree li::before, .tree li::after {
                 border: 0;
@@ -125,10 +133,12 @@
             <li>
                 <a onclick="toggleChildren(this)">Vho Madevha Neluheni</a>
                 <ul class="hidden">
-                    <li><a onclick="toggleChildren(this)">Vho Simon Ramudzuli Neluheni na Vho Muteki Phalu</a>
+                    <li>
+                        <a onclick="toggleChildren(this)">Vho Simon Ramudzuli Neluheni na Vho Muteki Phalu</a>
                         <ul class="hidden">
                             <li><a>Mashudu Mavhengani Neluheni</a></li>
-                            <li><a onclick="toggleChildren(this)">Tshililo Neluheni and Rosina Mothopi</a>
+                            <li>
+                                <a onclick="toggleChildren(this)">Tshililo Neluheni and Rosina Mothopi</a>
                                 <ul class="hidden">
                                     <li><a>Mashudu Neluheni</a></li>
                                     <li><a>Lufuno Madevha Neluheni</a></li>
@@ -144,10 +154,21 @@
                     <li><a>Vho Bele Neluheni</a></li>
                     <li><a>Vho Tshinakaho Matumba Neluheni</a></li>
                     <li><a>Vho Nyamuka Madi Ramulongo Neluheni</a></li>
+                    <li><a>Mme Avho Phalandwa</a></li>
                 </ul>
             </li>
         </ul>
     </div>
+
+    <script>
+        function toggleChildren(element) {
+            var ul = element.nextElementSibling;
+            ul.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
+
 
     <h1>Vho Madevha Vho Vha vha Koma</h1>
     <p>Rine riri Aheee Vhadau Vha vhatavhatsindi Vha Tshiheni</p>
@@ -156,6 +177,12 @@
     <p>ndi ludongo ngo ula bovhola</p>
 
     <h3>Mifhululu...............................................</h3>
+
+
+
+
+<h2>History Ya vho Madevha</h2>
+<p> Hupfi Vho Vha Vhe Munna wa muhaga  futhi wa swili na nndwa  , </p>
 
     <script>
         function toggleChildren(element) {
