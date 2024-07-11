@@ -1,6 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roaring Lion Head</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .lion-head {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .lion-head .main {
+            width: 100%;
+            height: 80%;
+            background-color: #ffd700; /* golden */
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .lion-head .main::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #ffd700; /* golden */
+            border-radius: 50%;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+        }
+        .lion-head .main::after {
+            content: '';
+            position: absolute;
+            width: 20%;
+            height: 20%;
+            background-color: #f0f0f0; /* background */
+            border-radius: 50%;
+            bottom: 90%;
+            left: 40%;
+            transform: rotate(45deg);
+        }
+        .lion-head .mouth {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-color: #ffd700; /* golden */
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0 0 50% 50%;
+            z-index: 1;
+        }
+        .lion-head .mouth::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #f0f0f0; /* background */
+            border-radius: 50%;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .lion-head .eyes {
+            position: absolute;
+            width: 20%;
+            height: 20%;
+            background-color: #f0f0f0; /* background */
+            border-radius: 50%;
+            top: 30%;
+            left: 40%;
+        }
+        .lion-head .eyes::before, .lion-head .eyes::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: #333; /* black */
+            border-radius: 50%;
+        }
+        .lion-head .eyes::before {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .lion-head .eyes::after {
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+        .lion-head .nose {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #333; /* black */
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .lion-head .ears {
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            background-color: #ffd700; /* golden */
+            border-radius: 50%;
+            top: 20%;
+            left: 30%;
+            transform: rotate(45deg);
+        }
+        .lion-head .ears::before, .lion-head .ears::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: #ffd700; /* golden */
+            border-radius: 50%;
+        }
+        .lion-head .ears::before {
+            top: 0;
+            left: 0;
+        }
+        .lion-head .ears::after {
+            bottom: 0;
+            right: 0;
+        }
+        .lion-head .mane {
+            position: absolute;
+            width: 120%;
+            height: 100%;
+            background-color: #f0f0f0; /* background */
+            border-radius: 50%;
+            top: -20%;
+            left: -10%;
+        }
+        .lion-head .mane::before, .lion-head .mane::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: #f0f0f0; /* background */
+            border-radius: 50%;
+        }
+        .lion-head .mane::before {
+            top: 20%;
+            left: 10%;
+        }
+        .lion-head .mane::after {
+            bottom: 20%;
+            right: 10%;
+        }
+        .lion-head .roar {
+            position: absolute;
+            width: 80%;
+            height: 40px;
+            background-color: #f0f0f0; /* background */
+            bottom: 5%;
+            left: 10%;
+            z-index: -1;
+            transform: skewX(-20deg);
+        }
+        .lion-head .roar::before, .lion-head .roar::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: #f0f0f0; /* background */
+        }
+        .lion-head .roar::before {
+            top: -40%;
+            left: 20%;
+            transform: rotate(10deg);
+        }
+        .lion-head .roar::after {
+            top: -40%;
+            right: 20%;
+            transform: rotate(-10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="lion-head">
+        <div class="main"></div>
+        <div class="mouth"></div>
+        <div class="eyes"></div>
+        <div class="nose"></div>
+        <div class="ears"></div>
+        <div class="mane"></div>
+        <div class="roar"></div>
+    </div>
+</body>
+</html>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vho Madevha Family Tree</title>
