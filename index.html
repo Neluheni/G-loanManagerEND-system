@@ -30,6 +30,7 @@
             padding: 20px 5px 0 5px;
             transition: all 0.5s;
             display: inline-block;
+            cursor: pointer;
         }
         .tree li::before, .tree li::after {
             content: '';
@@ -84,6 +85,9 @@
             color: #000;
             border: 2px solid #94a0b4;
         }
+        .hidden {
+            display: none;
+        }
         @media (max-width: 768px) {
             .tree ul {
                 padding-top: 10px;
@@ -119,13 +123,13 @@
     <div class="tree">
         <ul>
             <li>
-                <a href="#">Vho Madevha Neluheni</a>
-                <ul>
-                    <li><a href="#">Vho Simon Ramudzuli Neluheni na Vho Muteki Phalu</a>
-                        <ul>
+                <a href="#" onclick="toggleChildren(this)">Vho Madevha Neluheni</a>
+                <ul class="hidden">
+                    <li><a href="#" onclick="toggleChildren(this)">Vho Simon Ramudzuli Neluheni na Vho Muteki Phalu</a>
+                        <ul class="hidden">
                             <li><a href="#">Mashudu Mavhengani Neluheni</a></li>
-                            <li><a href="#">Tshililo Neluheni and Rosina Mothopi</a>
-                                <ul>
+                            <li><a href="#" onclick="toggleChildren(this)">Tshililo Neluheni and Rosina Mothopi</a>
+                                <ul class="hidden">
                                     <li><a href="#">Mashudu Neluheni</a></li>
                                     <li><a href="#">Lufuno Madevha Neluheni</a></li>
                                     <li><a href="#">Mutshidzi Ramudzuli Neluheni (ME)</a></li>
@@ -152,5 +156,17 @@
     <p>ndi ludongo ngo ula bovhola</p>
 
     <h3>Mifhululu...............................................</h3>
+
+    <script>
+        function toggleChildren(element) {
+            var parentLi = element.parentElement;
+            var childUl = parentLi.querySelector('ul');
+            if (childUl.classList.contains('hidden')) {
+                childUl.classList.remove('hidden');
+            } else {
+                childUl.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
