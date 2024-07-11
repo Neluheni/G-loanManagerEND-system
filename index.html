@@ -20,6 +20,7 @@
             transition: all 0.5s;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .tree li {
             float: left;
@@ -83,6 +84,33 @@
             color: #000;
             border: 2px solid #94a0b4;
         }
+        @media (max-width: 768px) {
+            .tree ul {
+                padding-top: 10px;
+            }
+            .tree li {
+                padding: 10px 2px 0 2px;
+            }
+            .tree li a {
+                padding: 5px 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .tree ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tree li {
+                float: none;
+                padding: 10px 0 0 0;
+            }
+            .tree li::before, .tree li::after {
+                border: 0;
+            }
+            .tree li a {
+                padding: 5px 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -117,16 +145,12 @@
         </ul>
     </div>
 
+    <h1>Vho Madevha Vho Vha vha Koma</h1>
+    <p>Rine riri Aheee Vhadau Vha vhatavhatsindi Vha Tshiheni</p>
+    <p>Vha Fundudzi Lanyaphunga Tshena</p>
+    <p>Vhanya Malindi madalavhathu avhanwe atshidala mavhele ahee mudau muila mutshila wambudzi ono kanda mupfa atudza khole ahee vho madevha thoho ndiludongo</p>
+    <p>ndi ludongo ngo ula bovhola</p>
 
-    <h1> Vho madevha Vho Vha vha koma ,  <p>Rine riri Aheee Vhadau Vha vhatavhatsindi Vha Tshiheni</p>
-        <p>Vha Fundudzi Lanyaphunga Tshena </p>,
-        <p>Vhanya Malindi madalavhathu avhanwe atshidala mavhele ahee mudau muila mutshila wambudzi<p>ono kanda mupfa atudza khole<p>ahee vho madevha thoho ndiludongo
-        </p></p>
-<p>ndi ludongo ngo ula bovhola</p> </h1>  
-
-
-    <h3>Mifhululu...............................................</h3
-
-            
+    <h3>Mifhululu...............................................</h3>
 </body>
 </html>
