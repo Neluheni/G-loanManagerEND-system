@@ -3,153 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-to-Case Form</title>
+    <title>Embedded Power BI Report</title>
     <style>
-        /* Form container styling */
-        form {
-            width: 100%;
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .report-container {
+            width: 80%;
+            height: 80%;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
 
-        /* Styling for form labels */
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        /* Styling for form input fields and dropdowns */
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select,
-        textarea {
+        iframe {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-
-        /* Styling for the submit button */
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
+            height: 100%;
             border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        /* Change button color on hover */
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Additional styling for focus state */
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: #4CAF50;
-            outline: none;
-            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-        }
-
-        /* Optional styling for form sections */
-        .form-section {
-            margin-bottom: 20px;
-        }
-
-        .form-section h3 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .form-section p {
-            font-size: 14px;
-            color: #666;
         }
     </style>
 </head>
 <body>
-
-<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DQy00000AJHk9" method="POST">
-
-    <input type="hidden" name="orgid" value="00DQy00000AJHk9">
-    <input type="hidden" name="retURL" value="https://neluheni.github.io/tree/">
-
-    <!-- Optional debugging elements -->
-    <!--
-    <input type="hidden" name="debug" value="1">
-    <input type="hidden" name="debugEmail" value="neluhenimr4jobs@gmail.com">
-    -->
-
-    <label for="name">Contact Name</label>
-    <input id="name" maxlength="80" name="name" size="20" type="text" />
-
-    <label for="email">Email</label>
-    <input id="email" maxlength="80" name="email" size="20" type="text" />
-
-    <label for="phone">Phone</label>
-    <input id="phone" maxlength="40" name="phone" size="20" type="text" />
-
-    <label for="subject">Subject</label>
-    <input id="subject" maxlength="80" name="subject" size="20" type="text" />
-
-    <label for="description">Description</label>
-    <textarea id="description" name="description"></textarea>
-
-    <label for="priority">Priority</label>
-    <select id="priority" name="priority">
-        <option value="">--None--</option>
-        <option value="High">High</option>
-        <option value="Medium">Medium</option>
-        <option value="Low">Low</option>
-    </select>
-
-    <label for="potential_liability">Potential Liability</label>
-    <select id="00NQy000003wLC9" name="00NQy000003wLC9" title="Potential Liability">
-        <option value="">--None--</option>
-        <option value="No">No</option>
-        <option value="Yes">Yes</option>
-    </select>
-
-    <label for="type">Type</label>
-    <select id="type" name="type">
-        <option value="">--None--</option>
-        <option value="Mechanical">Mechanical</option>
-        <option value="Electrical">Electrical</option>
-        <option value="Electronic">Electronic</option>
-        <option value="Structural">Structural</option>
-        <option value="Other">Other</option>
-    </select>
-
-    <label for="company">Company</label>
-    <input id="company" maxlength="80" name="company" size="20" type="text" />
-
-    <label for="status">Status</label>
-    <select id="status" name="status">
-        <option value="">--None--</option>
-        <option value="New">New</option>
-        <option value="Working">Working</option>
-        <option value="Escalated">Escalated</option>
-        <option value="Closed">Closed</option>
-    </select>
-
-    <input type="submit" name="submit">
-
-</form>
-
+    <div class="report-container">
+        <iframe 
+            src="https://app.powerbi.com/reportEmbed?reportId=Ei9NUFVEFN&autoAuth=true&ctid=49beb26c-5ac3-45ea-92f9-90b1f238c99f&pbi_source=linkShare" 
+            allowFullScreen="true"></iframe>
+    </div>
 </body>
 </html>
