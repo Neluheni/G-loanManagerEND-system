@@ -3,37 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power BI Report Embed</title>
+    <title>Embedded Power BI Report</title>
     <style>
+        /* General reset and body styling */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 100%;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #fff;
+            height: 100vh;
         }
+
+        /* Centered container for the iframe */
+        .iframe-container {
+            width: 90%;
+            max-width: 1200px;
+            height: 90%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Styling for the iframe itself */
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+
+        /* Add a subtle hover effect for better visuals */
+        .iframe-container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            transform: scale(1.01);
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body>
-<H1> By Neluheni Mutshidzi Ramudzuli </H1>
-    <div class="container">
+    <div class="iframe-container">
         <iframe 
-            title="OrderBoard" 
-            width="1140" 
-            height="541.25" 
-            src="https://app.powerbi.com/reportEmbed?reportId=61685de2-34f2-4e92-ae0b-b5ae63516649&autoAuth=true&embeddedDemo=true" 
+            src="https://app.powerbi.com/links/AKT53zTiv3?ctid=49beb26c-5ac3-45ea-92f9-90b1f238c99f&pbi_source=linkShare&bookmarkGuid=f18d4db6-7ba1-430a-b129-0e640af0cc32" 
             allowFullScreen="true">
         </iframe>
     </div>
